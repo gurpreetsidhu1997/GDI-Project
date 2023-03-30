@@ -712,7 +712,140 @@ ul {
 
 
 /* Page-4 css------------------------------- */
+.bg-color{
+  background-color: #204B75 !important;
+}
+
+
+.work{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.wimg-1{
+  background-image: url(./assets/air-quality.png);
+}
+
+.wimg-2{
+  background-image: url(./assets/children.png);
+}
+
+.wimg-3{
+  background-image: url(./assets/agriculture-1.png);
+}
+
+.wimg-4{
+  background-image: url(./assets/agriculture-2.png);
+}
+
+.wimg-5{
+  background-image: url(./assets/agriculture-3.png);
+}
+
+.wimg-6{
+  background-image: url(./assets/agriculture-4.png);
+}
+
+.work-img {
+  height: 350px;
+  width: 230px;
+  object-fit: contain;
+  position: relative;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.work-img span{
+  position: absolute;
+  font-size: 2.4rem;
+  color: #fff;
+  left: 10px;
+  bottom: 20px;
+}
 
 .gov-gallery{
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gov-gallery-items{
+  width: 498px;
+  height: 260px;
+  position: relative;
+  background: rgba(0, 0, 0, 0.5);
+
+  object-fit: contain;
+  background-size: 100% 100%;
+}
+
+.gov-gallery-items span{
+  position: absolute;
+  color: #fff;
+  font-size: 2.4rem;
+  left: 30px;
+  bottom: 20px;
+}
+
+.gov-gallery-items img{
+  width: 100%;
+  height: 100%;
+
+}
+
+.gallery-img1{
+  background-image: url(./assets/article-1.png);
+}
+.gallery-img2{
+  background-image: url(./assets/article-2.png);
+}
+.gallery-img3{
+  background-image: url(./assets/article-3.png);
+}
+.gallery-img4{
+  background-image: url(./assets/article1-1.png);
+}
+.gallery-img5{
+  background-image: url(./assets/article2-1.png);
+}
+.gallery-img6{
+  background-image: url(./assets/article-3-1.png);
+}
+
+.partners-logos{
+  width: 200px;
+}
+
+.partners-logos img{
+  width: 100%;
+}
+
+.partners{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.group-banner{
+  min-height: 500px;
+  background-image: url(./assets/group-img.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  object-fit: contain;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.group-banner span{
+  font-size: 4.4rem;
+  color: #fff;
+  margin-bottom: 60px;
+  /* position: absolute; */
+  text-align: center;
 }
