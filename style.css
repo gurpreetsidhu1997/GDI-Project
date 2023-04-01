@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
 *,
 *::after,
 *::before {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 html {
@@ -123,20 +126,26 @@ ul {
 
 /* ----------------------------------------------- */
 
+
+.hero-banner {
+  /* TODO: Change height for mobile responsiveness */
+  height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
 .hero-banner-img1{
-  background-image: url(./assets/air-quality.png);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url(./assets/air-quality.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .hero-banner-img2{
-  background-image: url(./assets/bannerImg2.png);
-}
-.hero-banner {
-  object-fit: contain;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url(./assets/bannerImg2.png);
+  background-position: center center;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
-  min-height: 500px;
-  display: flex;
-  align-items: center;
 }
 
 .hero-banner span {
@@ -149,8 +158,6 @@ ul {
 }
 
 .first-section p {
-  font-style: normal;
-  font-weight: 500;
   font-size: 2.4rem;
   text-align: center;
   color: #fff;
@@ -309,20 +316,29 @@ ul {
 /* ------------------------------------------------- */
 
 .footer {
-  background-color: #d7d7d9;
-  padding: 40px;
+  background-image:  url(./assets/footer.webp);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.footer-container {
+  padding: 30px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 80px;
+  gap: 40px;
+  width: 80%;
+  margin-left: 10%;
 }
 
 .footer-heading {
-  font-size: 25px;
+  font-size: 2.5rem;
+  font-weight: 600;
   color: #204b75;
 }
 
-.contatcs {
+.contacts {
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -334,7 +350,8 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  font-size: 17px;
+  font-size: 1.7rem;
+  font-weight: 500;
   color: #204b75;
   align-items: center;
 }
@@ -342,8 +359,8 @@ ul {
 .email-img,
 .phone-img,
 .location-img {
-  height: 60px;
-  width: 60px;
+  width: 10rem;
+  height: 7.5rem;
 }
 
 .email-img img,
@@ -368,42 +385,39 @@ ul {
   flex-wrap: wrap;
   gap: 25px;
 }
+
 .social-media div {
-  height: 30px;
+  height: 3.5rem;
 }
 
 .linkedIn img,
 .youtube img,
 .medium img,
 .newsletter img {
-  height: 100%;
   width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .policy {
   width: 100%;
-  font-size: 18px;
+  font-size: 1.4rem;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 15px;
+  font-weight: 300;
 }
+
 .policy li:last-child {
-  font-weight: 700;
+  font-weight: 600;
 }
+
 
 /* ------------------------------- */
 
-
-
 /* Page - 2 CSS */
 
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
-}
 .card{
   display: flex;
   gap: 30px;  
@@ -474,11 +488,17 @@ ul {
 /* page - 3 css----------------------------------------------------------------- */
 
 .hero-banner2-img{
-  background-image: url(./assets/banner-img2.png);
+
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url(./assets/banner-img2.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  /* background-image: url(./assets/banner-img2.png);
   object-fit: contain;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
-  min-height: 500px;
+  background-size: 100% 100%; */
+  min-height: 600px;
   position: relative;
   margin-bottom: 25rem;
 }
@@ -508,6 +528,7 @@ ul {
 
 .recruitment-img img{
   width: 100%;
+  height: 100%;
 }
 
 /* ------------------------------------------------------------- */
@@ -543,17 +564,21 @@ ul {
   margin-bottom: 18px;
 }
 
- 
-
 .job{
   background-color: #fff;
+  padding-bottom: 15px;
 }
 
 .job-openings {
-  padding: 2.5rem 5rem;
+  /* TODO: Change width 90% Horizontal Padding for responsiveness */
+  width: 80%;
+  padding: 2.5rem 0rem; 
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* TODO: Change margin 5% Horizontal Padding for responsiveness */
+  margin-left: 10%;
+  border-bottom: 0.5px solid #ccc;
 }
 
 .title {
@@ -562,61 +587,34 @@ ul {
   font-weight: 700;
 }
 
+.job-openings-btn{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+} 
+
 .desctiption-btn,.apply-btn{
   display: inline-block;
-  padding: 14px;
+  padding: 14px 20px;
   font-size: 1.8rem;
   background-color: #207267;
   color: #fff;
-  font-weight: 700;
-  border-radius: 25px;
-}
-
-.job-openings-btn{
-  max-width: 30rem;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+  font-weight: 500;
+  border-radius: 30px;
 }
 
 .content-wrap span{
   display: inline-block;
-  max-width: 700px;
+  max-width: 950px;
   width: 100%;
 }
 
-.two-section{
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  background-color: #e5e5e5;
-}
-
-.academic,.previous{
-  width: calc(50% - 20px);
-}
-
-.academic-logos,.previous-logos-item{
-  width: 200px;
-}
-.academic-logos img,.previous-logos-item img{
+.academic img {
   width: 100%;
 }
 
-.logos-list,.previous-logos-list {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.academic-heading,.previous-heading{
-  font-size: 3rem;
-  text-align: center;
-  padding: 20px 15px;
-  color: #94404e;
-}
 /* Page-4 css------------------------------- */
+
 .bg-color{
   background-color: #204B75 !important;
 }
@@ -942,10 +940,11 @@ ul {
 
 @media screen and (max-width:576px) {
     .navbar{
-        padding: 1.5rem 1.5rem;
+      padding: 1.5rem 1.5rem;
     }
+
     .logo-strip{
-        padding: 1.5rem 1.5rem;
+      padding: 1.5rem 1.5rem;
     }
 
     .first-section{
@@ -1017,7 +1016,7 @@ ul {
         margin-left: 30px;
     }
     
-    .contatcs{
+    .contacts{
         flex-direction: column;
         align-items: center;
     }
