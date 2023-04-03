@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+
 *,
 *::after,
 *::before {
@@ -23,8 +24,8 @@ ul {
 }
 
 .container {
-  /* max-width: 1366px;
-  width: 100%; */
+  max-width: 1496px;
+  width: 100%;
   margin: 0 auto;
   /* padding: 0 15px; */
   background-color: #424242;
@@ -55,7 +56,6 @@ ul {
   justify-content: space-between;
   align-items: center;
   gap: 60px;
-  z-index: 999;
 }
 .nav-link {
   transition: 0.3s ease-out;
@@ -122,20 +122,16 @@ ul {
   .first-column,.second-column{
     width: 100% !important;
   }
-
-  .card-section .card{
-    margin: 0px 98px;
-  }
 }
 
 /* ----------------------------------------------- */
 
 
 .hero-banner {
+  /* TODO: Change height for mobile responsiveness */
   height: 80vh;
   display: flex;
-  flex-direction: column;
-  gap: 70px;
+  align-items: center;
 }
 
 .hero-banner-img1{
@@ -226,15 +222,15 @@ ul {
 
 .fourth-section__content {
   background-image: url("./assets/pollution.png");
+  object-fit: contain;
   background-repeat: no-repeat;
+  background-size: 100% 100%;
   background-color: #207267;
   padding: 50px;
   display: flex;
   flex-direction: column;
   position: relative;
   margin: 5.5rem;
-  background-position: center center;
-  background-size: cover;
 }
 
 .quote {
@@ -427,7 +423,6 @@ ul {
   gap: 30px;  
   background-color: #424242;
   padding: 20px;
-  margin: 0 150px;
 }
 
 .profile-image{
@@ -470,9 +465,6 @@ ul {
   background-color: #424242 ;
   gap: 149px;
   padding: 25px;
-  margin: 0 auto;
-  /* max-width: 900px; */
-  width: 80%;
 }
 
 .image{
@@ -629,24 +621,21 @@ ul {
 .hero-banner-img3{
   background-image: url(./assets/pexels-photo.png);
   position: relative;
-  padding: 20px 0 0 45px;
-  background-position: center center;
-  background-size: cover;
 }
 
 .hero-banner-img3 h2{
   font-size: 4.5rem;
-  /* position: absolute; */
-  top: 180px;
-  max-width: 475px;
-  width: 100%;
-  left: 60px;
-  color: #fff;
+    position: absolute;
+    top: 180px;
+    max-width: 475px;
+    width: 100%;
+    left: 60px;
+    color: #fff;
 }
 
 .hero-banner-img3 p{
   font-size: 2.4rem;
-  /* position: absolute; */
+  position: absolute;
   bottom: 85px;
   left: 60px;
   max-width: 580px;
@@ -658,54 +647,37 @@ ul {
   flex-wrap: wrap;
 }
 
-.work a{
-  cursor: pointer;
+.wimg-1{
+  background-image: url(./assets/air-quality.png);
 }
 
-/* .wimg-1{
-  background-image: url(./assets/air-quality.png);
-} */
-
-/* .wimg-2{
+.wimg-2{
   background-image: url(./assets/children.png);
-} */
+}
 
-/* .wimg-3{
+.wimg-3{
   background-image: url(./assets/agriculture-1.png);
-} */
+}
 
-/* .wimg-4{
+.wimg-4{
   background-image: url(./assets/agriculture-2.png);
-} */
+}
 
-/* .wimg-5{
+.wimg-5{
   background-image: url(./assets/agriculture-3.png);
-} */
+}
 
-/* .wimg-6{
+.wimg-6{
   background-image: url(./assets/agriculture-4.png);
-} */
+}
 
 .work-img {
   height: 350px;
-  width: 253px;
-  background-repeat: none;
+  width: 218px;
   object-fit: contain;
   position: relative;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  overflow: hidden;
-}
-
-.work-img  img{
-  width: 100%;
-    height: 100%;
-    transition: transform 0.5s ease;
-
-}
-
-.work-img:hover img{
- transform: scale(1.5);
 }
 
 .work-img span{
@@ -723,7 +695,7 @@ ul {
 }
 
 .gov-gallery-items{
-  width: 506px;
+  width: 436px;
   height: 260px;
   position: relative;
   background: rgba(0, 0, 0, 0.5);
@@ -786,8 +758,7 @@ ul {
   min-height: 500px;
   background-image: url(./assets/group-img.png);
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+  background-size: 100% 100%;
   object-fit: contain;
   position: relative;
   display: flex;
@@ -938,7 +909,6 @@ ul {
       gap: 10px;
     }
 
-    
     .hero-banner2 .banner-content{
       left:0;
       max-width: unset;
@@ -953,8 +923,6 @@ ul {
 
     .image-gallery{
       justify-content: center;
-      gap: 15px;
-      padding: 15px;
     }
 
     .content-text{
@@ -966,29 +934,6 @@ ul {
     }
     .left-content,.right-content{
       width: 100%;
-    }
-
-    .hero-banner{
-      height: 54vh;
-      gap: 0px;
-    }
-
-    .hero-banner-img3 h2{
-      font-size: 3.5rem;
-    }
-
-    .hero-banner2-img{
-      min-height:288px;
-    }
-    .hero-banner-img3 p{
-      font-size: 2.1rem;
-    }
-    .banner-content{
-      bottom: -213px;
-    }
-
-    .card-section  .card{
-      margin: 0;
     }
 }
 
@@ -1056,16 +1001,7 @@ ul {
         font-size: 16px;
     }
 
-    .hero-banner span{
-      font-size: 23px;
-    }
-    .second-section__heading {
-      font-size: 2rem;
-    }
-
-    .image-gallery{
-      padding: 0;
-    }
+    
 }
 
 @media screen and (max-width:426px) {
@@ -1109,9 +1045,9 @@ ul {
       font-size: 1.3rem;
     }
 
-    /* .job .job-openings{
+    .job .job-openings{
       padding: 1.5rem 3rem;
-    } */
+    }
 
     .previous .previous-heading{
       font-size: 2rem;
@@ -1123,25 +1059,4 @@ ul {
     .academic-logos, .previous-logos-item{
       width: 150px;
     }
-
-    .hero-banner{
-        height: 25vh;
-    }
-
-    .hero-banner2-img {
-      margin-bottom: 30rem;
-      min-height: 450px;
-    }
-    .banner-content{
-      bottom: -249px;
-    }
-    .hero-banner-img3 p{
-      display: none;
-    }
-    .hero-banner-img3{
-      padding:5px 10px;
-    }
-    .card {
-      margin: 0;
-  }
 }
