@@ -776,6 +776,15 @@ ul {
   background-image: url(./assets/article-3-1.png);
 }
 
+.partners{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px;
+  gap: 80px;
+  align-items: center;
+  background-color: #fff;
+}
+
 .partners-logos{
   width: 200px;
 }
@@ -784,14 +793,6 @@ ul {
   width: 100%;
 }
 
-.partners{
-  display: flex;
-  flex-wrap: wrap;
-  padding: 30px;
-  gap: 100px;
-  justify-content: center;
-  align-items: center;
-}
 
 .two-column{
   display: flex;
