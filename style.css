@@ -7,6 +7,7 @@
   padding: 0px;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -78,64 +79,18 @@ ul {
 }
 
 .nav-item a{
-    color:#fff;
-    font-size: 17px;
+  color:#fff;
+  font-size: 17px;
 }
 
-@media (max-width: 1025px) {
-  .navbar{
-    justify-content: space-between;
-  }
-  .hamburger {
-    display: block;
-  }
-  .hamburger.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-  .hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-  .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-  .nav-menu {
-    position: fixed;
-    left: -100%;
-    top: 70px;
-    gap: 0;
-    flex-direction: column;
-    background-color: #262626;
-    width: 100%;
-    text-align: center;
-    transition: 0.3s;
-  }
-  .nav-item {
-    margin: 16px 0;
-  }
-  .nav-menu.active {
-    left: 0;
-  }
-
-  .two-column{
-    flex-direction: column;
-  }  
-  .first-column,.second-column{
-    width: 100% !important;
-  }
-
-  .card-section .card{
-    margin: 0px 98px;
-  }
-}
-
-/* ----------------------------------------------- */
-
+/* ALL PAGES: HERO BANNER START */
 
 .hero-banner {
   height: 80vh;
   display: flex;
   flex-direction: column;
-  gap: 70px;
+  justify-content: center;
+  /* gap: 70px; */
 }
 
 .hero-banner-img1{
@@ -152,14 +107,25 @@ ul {
   background-repeat: no-repeat;
 }
 
+.newsletter-banner-image {
+  background:  url(./assets/newsletter-banner-image.webp);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .hero-banner span {
-  font-size: 50px;
+  font-size: 6rem;
   color: #fff;
-  max-width: 260px;
+  max-width: 350px;
   width: 100%;
   display: inline-block;
   margin-left: 80px;
+  font-weight: 500;
 }
+
+/* ALL PAGES: HERO BANNER END */
+
 
 .first-section p {
   font-size: 2.4rem;
@@ -627,68 +593,38 @@ ul {
 }
 
 .hero-banner-img3{
-  background-image: url(./assets/pexels-photo.png);
-  position: relative;
-  padding: 20px 0 0 45px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url(./assets/pexels-photo.png);
   background-position: center center;
   background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 20px 45px 0 45px;
+  height: 90vh;
 }
 
 .hero-banner-img3 h2{
   font-size: 4.5rem;
-  /* position: absolute; */
-  top: 180px;
-  max-width: 475px;
   width: 100%;
-  left: 60px;
   color: #fff;
 }
 
 .hero-banner-img3 p{
   font-size: 2.4rem;
-  /* position: absolute; */
-  bottom: 85px;
-  left: 60px;
+  margin-top: 30px;
   max-width: 580px;
   color: #fff;
 }
-.work{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+
+/* HOME: iWork Section Start */
+
+.works{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-.work a{
+.work {
   cursor: pointer;
-}
-
-/* .wimg-1{
-  background-image: url(./assets/air-quality.png);
-} */
-
-/* .wimg-2{
-  background-image: url(./assets/children.png);
-} */
-
-/* .wimg-3{
-  background-image: url(./assets/agriculture-1.png);
-} */
-
-/* .wimg-4{
-  background-image: url(./assets/agriculture-2.png);
-} */
-
-/* .wimg-5{
-  background-image: url(./assets/agriculture-3.png);
-} */
-
-/* .wimg-6{
-  background-image: url(./assets/agriculture-4.png);
-} */
-
-.work-img {
   height: 350px;
-  width: 253px;
   background-repeat: none;
   object-fit: contain;
   position: relative;
@@ -697,24 +633,83 @@ ul {
   overflow: hidden;
 }
 
-.work-img  img{
+.work img{
   width: 100%;
-    height: 100%;
-    transition: transform 0.5s ease;
-
+  height: 100%;
+  transition: transform 0.5s ease;
 }
 
-.work-img:hover img{
- transform: scale(1.5);
+.work:hover img{
+  transform: scale(1.2);
 }
 
-.work-img span{
+.work-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
+  top: 0;
+  left: 0; 
+}
+
+.work span{
   position: absolute;
   font-size: 2.4rem;
   color: #fff;
-  left: 10px;
+  padding: 10px;
   bottom: 20px;
 }
+
+/* HOME: iWork Section End */
+
+
+/* HOME: iDream Section Start */
+
+.dreams{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+}
+
+.dream {
+  cursor: pointer;
+  height: 350px;
+  background-repeat: none;
+  object-fit: contain;
+  position: relative;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.dream img{
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.dream:hover img{
+  transform: scale(1.2);
+}
+
+.dream-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
+  top: 0;
+  left: 0; 
+}
+
+.dream span{
+  position: absolute;
+  font-size: 2.4rem;
+  color: #fff;
+  padding: 10px;
+  bottom: 20px;
+}
+
+/* HOME: iDream Section End */
+
 
 .gov-gallery{
   display: flex;
@@ -782,26 +777,6 @@ ul {
   align-items: center;
 }
 
-.group-banner{
-  min-height: 500px;
-  background-image: url(./assets/group-img.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  object-fit: contain;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-}
-
-.group-banner span{
-  font-size: 4.4rem;
-  color: #fff;
-  margin-bottom: 60px;
-  text-align: center;
-}
-
 .two-column{
   display: flex;
 }
@@ -856,8 +831,8 @@ ul {
 
 .left-text{
   font-size: 1.8rem;
-    display: flex;
-    gap: 13px;
+  display: flex;
+  gap: 13px;
 }
 
 .content-img img{
@@ -873,8 +848,9 @@ ul {
 }
 
 .right-text{
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   line-height: 2.3rem;
+  font-weight: 400;
 }
 
 .read-more-btn{
@@ -906,6 +882,128 @@ ul {
   display: flex;
 }
 
+/* RESPONSIVE STYLES */
+
+@media screen and (max-width: 1025px) {
+  .navbar{
+    justify-content: space-between;
+  }
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #262626;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+  .nav-item {
+    margin: 16px 0;
+  }
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .two-column{
+    flex-direction: column;
+  }  
+  .first-column,.second-column{
+    width: 100% !important;
+  }
+
+  .card-section .card{
+    margin: 0px 98px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .fourth-section__content{
+      margin: 1.5rem;
+      padding: 15px;
+  }
+  .author-name{
+    margin-right: 12.9rem;
+      
+  }
+  .author-img{
+      height: 12rem;
+      width: 12rem;
+      bottom: -50px;
+      right: -12px;
+  }
+
+  .job-openings{
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  
+  .hero-banner2 .banner-content{
+    left:0;
+    max-width: unset;
+  }
+  .academic .logos-list{
+    justify-content: center;
+  }
+
+  .previous .previous-logos-list{
+    justify-content: center;
+  }
+
+  .image-gallery{
+    justify-content: center;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .content-text{
+    max-width: unset;
+  }
+
+  .letter-content{
+    flex-direction: column;
+  }
+  .left-content,.right-content{
+    width: 100%;
+  }
+
+  .hero-banner{
+    height: 54vh;
+    gap: 0px;
+  }
+
+  .hero-banner-img3 h2{
+    font-size: 3.5rem;
+  }
+
+  .hero-banner2-img{
+    min-height:288px;
+  }
+  .hero-banner-img3 p{
+    font-size: 2.1rem;
+  }
+  .banner-content{
+    bottom: -213px;
+  }
+
+  .card-section  .card{
+    margin: 0;
+  }
+}
 
 @media screen and (max-width:658px) {
   .hero-banner-img3 p{
@@ -916,82 +1014,6 @@ ul {
   }
 }
 
-
-@media screen and (max-width:768px) {
-    .fourth-section__content{
-        margin: 1.5rem;
-        padding: 15px;
-    }
-    .author-name{
-        margin-right: 12.9rem;
-        
-    }
-    .author-img{
-        height: 12rem;
-        width: 12rem;
-        bottom: -50px;
-        right: -12px;
-    }
-
-    .job-openings{
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    
-    .hero-banner2 .banner-content{
-      left:0;
-      max-width: unset;
-    }
-    .academic .logos-list{
-      justify-content: center;
-    }
-
-    .previous .previous-logos-list{
-      justify-content: center;
-    }
-
-    .image-gallery{
-      justify-content: center;
-      gap: 15px;
-      padding: 15px;
-    }
-
-    .content-text{
-      max-width: unset;
-    }
-
-    .letter-content{
-      flex-direction: column;
-    }
-    .left-content,.right-content{
-      width: 100%;
-    }
-
-    .hero-banner{
-      height: 54vh;
-      gap: 0px;
-    }
-
-    .hero-banner-img3 h2{
-      font-size: 3.5rem;
-    }
-
-    .hero-banner2-img{
-      min-height:288px;
-    }
-    .hero-banner-img3 p{
-      font-size: 2.1rem;
-    }
-    .banner-content{
-      bottom: -213px;
-    }
-
-    .card-section  .card{
-      margin: 0;
-    }
-}
-
 @media screen and (max-width:576px) {
     .navbar{
       padding: 1.5rem 1.5rem;
@@ -999,6 +1021,10 @@ ul {
 
     .logo-strip{
       padding: 1.5rem 1.5rem;
+    }
+
+    .hero-banner-img3 {
+      min-height: 80vh;
     }
 
     .first-section{
@@ -1072,25 +1098,33 @@ ul {
     .sixth-section__img1 {
       height: 70px;
     }
+
     .sixth-section {
       padding: 15px;
     }
+
+ 
+
+    .hero-banner-img3{
+      padding:5px 10px;
+    }
+
     .hero-banner span{
-        margin-left: 30px;
+      margin-left: 30px;
     }
     
     .contacts{
-        flex-direction: column;
-        align-items: center;
+      flex-direction: column;
+      align-items: center;
     }
 
     .sixth-section{
-        flex-direction: column;
-        gap: 40px;
+      flex-direction: column;
+      gap: 40px;
     }
     .policy,.social-media{
-        flex-direction: column;
-        align-items: center;
+      flex-direction: column;
+      align-items: center;
     }
 
     .hero-banner2-img > .banner-content{
@@ -1135,12 +1169,8 @@ ul {
     .banner-content{
       bottom: -249px;
     }
-    .hero-banner-img3 p{
-      display: none;
-    }
-    .hero-banner-img3{
-      padding:5px 10px;
-    }
+
+  
     .card {
       margin: 0;
   }
