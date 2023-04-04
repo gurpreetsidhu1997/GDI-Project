@@ -1049,6 +1049,11 @@ ul {
       min-height: 80vh;
     }
 
+    .partners-logos {
+      width: 100px;
+      flex-grow: 1;
+    }
+
     .first-section{
         padding: 2.5rem 1.5rem;
     }
