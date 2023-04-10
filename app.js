@@ -17,3 +17,14 @@ document.querySelectorAll(".nav-link").forEach((n) =>
     navMenu.classList.remove("active");
   })
 );
+
+
+let data =[
+  {
+    name:,
+    designation:,
+    education:,
+    pastExperience:,
+    hobbues:,
+  },
+]

@@ -135,6 +135,7 @@ ul {
   height: 80vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 70px;
 }
 
@@ -150,6 +151,40 @@ ul {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+.hero-banner-img4{
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url(./assets/children-1.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero-banner-img5{
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url(./assets/agriculture-12.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero-banner-img6{
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url(./assets/agriculture2.png);
+  background-position: center center;
+  background-size: cover;
+  /* background-repeat: no-repeat; */
+}
+
+.hero-banner-img7{
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url(./assets/childrenandcitizen.png);
+  background-position: center center;
+  background-size: cover;
+  /* background-repeat: no-repeat; */
+}
+
+.hero-banner-img8{
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url(./assets/greatMoneyMeetsgreatpurpose.png);
+  background-position: center center;
+  background-size: cover;
+  /* background-repeat: no-repeat; */
 }
 
 .hero-banner span {
@@ -629,7 +664,7 @@ ul {
 .hero-banner-img3{
   background-image: url(./assets/pexels-photo.png);
   position: relative;
-  padding: 20px 0 0 45px;
+  padding-left: 45px;
   background-position: center center;
   background-size: cover;
 }
